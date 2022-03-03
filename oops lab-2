@@ -1,0 +1,25 @@
+
+#include <iostream>
+
+using namespace std;
+ inline int add(int n,int m)
+{
+    int sum;
+    sum=0;
+    sum=m+n;
+    return sum;
+}
+
+int main()
+{int n,m,sum;
+  cout<<"enter the the value of of n"<<endl;
+cin>>n;
+cout<<"enter the value of m"<<endl;
+cin>>m;
+ sum=add(n,m);
+ cout<<sum;
+    
+
+    return 0;
+}
+
