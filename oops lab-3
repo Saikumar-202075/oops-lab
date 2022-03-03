@@ -1,0 +1,29 @@
+
+#include <iostream>
+
+using namespace std;
+class Math
+{
+    public:
+    int power(int n,int m=2)
+    {
+    int result=1;
+    int i;
+    for(i=0;i<m;i++)
+    { result=result*n;
+    
+}
+   return result;
+}
+};
+int main()
+{int n,m;
+    Math x;
+    cout<<"enter the value of n  ";
+    cin>>n;
+    cout<<"enter the value of m ";
+    cin>>m;
+    cout<<x.power(n,m);
+
+    return 0;
+}
