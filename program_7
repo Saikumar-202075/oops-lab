@@ -1,0 +1,66 @@
+// adding of the object of the two clases
+
+#include <iostream>
+
+using namespace std;
+
+class DM{
+  public:
+    float meters,centimeters;
+    
+    
+    DM(float mts,float cent)
+    {
+        meters =mts;
+        centimeters=cent;
+    }
+    int convert()
+    {
+        
+        meters=meters +centimeters/100;
+        return meters;
+    }
+    void display(){
+       cout<<"Meters: "<<meters<<endl;
+       cout<<"centimeters: "<<centimeters<<endl;
+   }
+    
+};
+class DB{
+    private:
+    float feet,inches;
+    public:
+    DB(float ft,float inc)
+    {
+        feet =ft;
+        inches=inc;
+    }
+    int con()
+    {
+        feet  =feet+ inches/12;
+        return feet;
+    }
+  DB add(DM b)
+   {    int x,y;
+       
+       x=feet+b.meters * 100/12;
+       y=inches+b.centimeters*100;
+       DB z(x,y);
+       return z;
+       
+   }
+   void display(){
+       cout<<"Feet: "<<feet<<endl;
+       cout<<"Inches: "<<inches<<endl;
+   }
+    
+};
+int main()
+{
+    DB x(4,6);
+    x.display();
+    DM y(2,3);
+    y.display();
+    DB z = x.add(y);
+    z.display();
+}
